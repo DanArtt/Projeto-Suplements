@@ -84,7 +84,7 @@ function desenharProdutoNoCarrinho(idProduto) {
         <div class="p-2 flex flex-col justify-between">
             <p class="text-slate-900 text-xl font-medium">${produto.nomeProduto}</p>
             <p class="text-slate-900 text-lg">${produto.especificacao}</p>
-            <p class="text-green-500 text-xl">R$:${produto.precoPromocao}</p>
+            <p class="text-green-500 text-xl">R$: ${produto.precoPromocao}</p>
         </div>
         <div class="flex text-slate-900 items-end items-center absolute bottom-2 right-2 text-xl">
             <button id="decrementar-produto-${produto.id}" class="hover:bg-slate-500 hover:text-slate-100 duration-200 px-2.5 rounded-full">-</button>
