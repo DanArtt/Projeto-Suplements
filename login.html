@@ -19,18 +19,21 @@
                 <form action="">
                     <h1 class="text-center mb-10 font-bold text-4xl">Entrar</h1>
                     <input type="text" id="cpf"
-                        class=" bg-gray-100 border outline-none rounded-md py-3 w-full px-4 mb-3" placeholder="CPF">
+                        class=" bg-gray-100 border outline-none rounded-md py-3 w-full px-4 mb-3" placeholder="CPF" required>
                     <input type="password" id="senha"
-                        class=" bg-gray-100 border outline-none rounded-md py-3 w-full px-4 mb-3" placeholder="Senha">
+                        class=" bg-gray-100 border outline-none rounded-md py-3 w-full px-4 mb-3" placeholder="Senha" required>
                     <div class="flex">
                         <button type="submit"
                             class=" bg-sky-700 hover:bg-sky-400 border outline-none rounded-md py-3 w-full px-4 font-semibold text-white">Entrar</button>
-                        <button type="submit"
-                            class=" bg-sky-700 hover:bg-sky-400 border outline-none rounded-md py-3 w-full px-4 font-semibold text-white">Entrar</button>
+                        <button type="reset"
+                            class=" bg-sky-700 hover:bg-sky-400 border outline-none rounded-md py-3 w-full px-4 font-semibold text-white">Limpar</button>
                     </div>
                     <div class="flex justify-center items-center pt-12 gap-4">
-                        <p>Novo na Lorem? <a href="" class="text-sky-700 font-bold hover:underline">Cadastrar</a></p>
+                        <p>Novo na Lorem? <a href="cadastro.html" class="text-sky-700 font-bold hover:underline">Cadastrar</a></p>
                         <a href="" class="hover:underline">Esqueceu sua Senha ?</a>
+                    </div>
+                    <div  class="flex justify-center pt-12 hover:underline">
+                        <a href="index.html">Voltar</a>
                     </div>
                 </form>
             </div>
