@@ -9,17 +9,17 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="shortcut icon" type="imagex/png" href="./img/logoBranca.png">
+  <link rel="shortcut icon" type="imagex/png" href="./img/logoBranca.png">
 </head>
 
 <body class="font-sans bg-stone-100 flex flex-col">
   <!------------------- Carrinho de Compras ------------------>
   <section id="carrinho"
-    class="fixed top-0 right-[-500px] bg-sky-700  h-screen w-[500px] border-solid border-l-2 border-black z-20 duration-200 p-5 flex flex-col justify-between">
+    class="fixed top-0 right-[-350px] bg-sky-700  h-screen w-[350px] border-solid border-l-2 border-black z-20 duration-200 p-5 flex flex-col justify-between">
     <div id="cabecalho-carrinho" class="flex justify-between m-4">
       <p>Meu carrinho</p>
       <button id="fechar-carrinho" class="h-3/5">
-        <i class="fa-solid fa-circle-xmark fa-xl text-slate-800 hover:text-slate-900"></i>
+        <i class="fa-solid fa-circle-xmark fa-md text-slate-800 hover:text-slate-900"></i>
       </button>
     </div>
     <section id="produtos-carrinho" class="h-3/5 overflow-y-auto flex flex-col gap-2">
@@ -34,50 +34,94 @@
   <!---------------- Navbar do Site ----------------->
   <header class="sticky top-0 z-10">
     <div class="bg-black">
-      <ul class="flex justify-around h-10 text-white ">
+      <ul class="flex justify-around h-6 text-white ">
         <li class="flex items-center gap-2">
-          <img class="h-4"
+          <img class="h-3"
             src="https://lojamaxtitanium.vtexassets.com/assets/vtex.file-manager-graphql/images/6ea7c4bb-d366-406b-a402-57ee68213830___ba120aa34400ee8299d65969d439261e.svg"
             alt="imagem pix e boleto">
-          <p>Pix e Boleto 5% de desconto</p>
+          <p class="text-xs flex items-center">Pix e Boleto 5% de desconto</p>
         </li>
         <li class="flex items-center gap-2">
-          <img class="h-4"
+          <img class="h-3"
             src="https://lojamaxtitanium.vtexassets.com/assets/vtex.file-manager-graphql/images/ab020779-c3fa-47b3-9979-10940dd9ed55___1cdd94435709cd4df52a87c8f8fb7399.svg"
             alt="imagem frente">
-          <p>Frete grátis</p>
+          <p class="text-xs flex items-center">Frete grátis</p>
         </li>
         <li class="flex items-center gap-2">
-          <img class="h-4"
+          <img class="h-3"
             src="https://lojamaxtitanium.vtexassets.com/assets/vtex.file-manager-graphql/images/7fb8166e-e1fe-4648-9cfd-19584751748e___44fcae732b9a8045ed0264abeace3f47.svg"
             alt="imagem cartao credito">
-          <p>Parcelamento em 6x sem juros</p>
+          <p class="text-xs flex items-center">Parcelamento em 6x sem juros</p>
         </li>
         <li class="flex items-center gap-2  ">
-          <img class="h-4"
+          <img class="h-3"
             src="https://lojamaxtitanium.vtexassets.com/assets/vtex.file-manager-graphql/images/8a8e86c9-d81a-4209-8417-506aaf1bd629___e02a2a158ed30b397d459dd99478e306.svg"
             alt="imagem garantia">
-          <p>Garantia de Qualidade</p>
+          <p class="text-xs flex items-center">Garantia de Qualidade</p>
         </li>
       </ul>
     </div>
     <!-- NavBar Principal -->
-    <div
-      class="flex bg-gradient-to-r from-sky-700 to-sky-400 px-8 py-2 justify-between shadow-slate-900 shadow-lg">
-      <img class="h-24" src="img/logoPreta.png" alt="Logo Loja" />
+    <div class="flex bg-gradient-to-r from-sky-700 to-sky-400 px-8 py-2 justify-between">
+      <img class="h-12" src="img/logoPreta.png" alt="Logo Loja" />
       <div class="flex gap-3 items-center mx-6">
         <div class="flex pr-6 gap-1.5 items-center">
-          <a class="underline decoration-solid" href="/login.html">Entrar</a>
-          <p>|</p>
-          <a class="underline decoration-solid" href="cadastro.html">Cadastrar-se</a>
+          <a class=" text-xs no-underline hover:underline decoration-solid " href="/login.html">Entrar</a>
+          <p class="text-xs">|</p>
+          <a class="text-xs no-underline hover:underline decoration-solid" href="cadastro.html">Cadastrar-se</a>
 
         </div>
-        <button><i class="fa-solid fa-heart fa-lg" style="color: #000000;"></i> 2</button>
-        <button><i class="fa-solid fa-user fa-lg" style="color: #000000;"></i></button>
-        <button id="abrir-carrinho"><i class="fa-solid fa-cart-shopping fa-lg" style="color: #000000;"></i></button>
+        <button><i class="fa-solid fa-heart fa-xs duration-150 hover:scale-125" style="color: #000000;"></i></button>
+        <button><i class="fa-solid fa-user fa-xs duration-150 hover:scale-125" style="color: #000000;"></i></button>
+        <button id="abrir-carrinho"><i class="fa-solid fa-cart-shopping fa-xs duration-150 hover:scale-125"
+            style="color: #000000;"></i></button>
       </div>
     </div>
+    <nav class="navPrincipal shadow-slate-900 shadow-lg">
+      <ul class="navbar">
+        <li class="dropdown li">
+          <a class="produtosA" href="#">Todas as Categorias</a>
+          <div class="dropdown-content">
+            <ul class="ulCartao">
+              <li class="product li">
+                <a class="produtosA" href="#">Proteínas</a>
+                <div class="submenu">
+                  <a class="produtosA" href="#">Whey Protein</a>
+                  <a class="produtosA" href="#">Hipercalórico</a>
+                </div>
+              </li>
+              <li class="product li">
+                <a class="produtosA" href="#">Energia</a>
+                <div class="submenu">
+                  <a class="produtosA" href="#">Creatina</a>
+                  <a class="produtosA" href="#">Pré-treino</a>
+                </div>
+              </li>
+              <li class="product li">
+                <a class="produtosA" href="#">Acessorios</a>
+                <div class="submenu">
+                  <a class="produtosA" href="#">Garrafas</a>
+                  <a class="produtosA" href="#">Musculação</a>
+                </div>
+              </li>
+              <li class="product li">
+                <a class="produtosA" href="#">Roupas</a>
+                <div class="submenu">
+                  <a class="produtosA" href="#">Masculino</a>
+                  <a class="produtosA" href="#">Feminino</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="li"><a class="produtosA" href="#">Promoções</a></li>
+        <li class="li"><a class="produtosA" href="#">Lançamentos</a></li>
+        <li class="li"><a class="produtosA" href="#">Top 10</a></li>
+        <li class="li"><a class="produtosA" href="#">Objetivo</a></li>
+      </ul>
+    </nav>
   </header>
+
 
   <!------------------ Carrossel do Site ------------------->
   <div class="relative overflow-hidden bg-gray-200 shadow-md shadow-slate-900 mb-20">
@@ -101,14 +145,15 @@
     </section>
   </main>
 
-  <div class="bg-black h-44 my-20 ">
+  <div class="bg-black h-36 my-20 ">
     <div class="flex justify-center items-center flex-col py-5 gap-4">
-      <h2 class="text-white flex justify-center text-3xl">Cadastre seu e-mail e receba promoções e novidades.</h2>
+      <h2 class="text-white flex justify-center text-xl items-center">Cadastre seu e-mail e receba promoções e
+        novidades.</h2>
       <div class="flex justify-center gap-6 items-center">
-        <input type="email" id="email" name="email" class="h-14 pl-4 pr-24 m-2 rounded-lg"
+        <input type="email" id="email" name="email" class="h-8 pl-4 pr-24 m-2 rounded-lg"
           placeholder="Digite seu E-email">
         <button type="submit "
-          class="h-14 px-10 m-2 text-indigo-100 transition-colors duration-150 bg-sky-700 rounded-lg focus:shadow-outline hover:bg-sky-400">Enviar</button>
+          class="h-8 px-6 m-2 text-indigo-100 transition-colors duration-150 bg-sky-700 rounded-lg focus:shadow-outline hover:bg-sky-400">Enviar</button>
       </div>
     </div>
   </div>
@@ -116,21 +161,21 @@
   <!--------------------- Footer do Site --------------------->
   <footer>
     <div>
-      <h1 class="flex justify-center pb-10 text-3xl mb-20">
+      <h1 class="flex justify-center pb-10 text-2xl mb-20">
         Formas de Pagamento
       </h1>
       <div class="flex flex-wrap justify-center gap-24">
-        <img class="h-8" src="https://www.gsuplementos.com.br/_nuxt/img/01.abefb7d.svg" alt="Imagem VisaCard">
-        <img class="h-8"
+        <img class="h-6" src="https://www.gsuplementos.com.br/_nuxt/img/01.abefb7d.svg" alt="Imagem VisaCard">
+        <img class="h-6"
           src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNy43MzgiIGhlaWdodD0iMTcuMjIyIiB2aWV3Qm94PSIwIDAgMjcuNzM4IDE3LjIyMiI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTE2LjEzMSAtMTEuMzg5KSI+PGNpcmNsZSBjeD0iOC41OTkiIGN5PSI4LjU5OSIgcj0iOC41OTkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI2LjY3MSAxMS40MTMpIiBmaWxsPSIjZjc5ZTFiIj48L2NpcmNsZT48Y2lyY2xlIGN4PSI4LjU5OSIgY3k9IjguNTk5IiByPSI4LjU5OSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTYuMTMxIDExLjM4OSkiIGZpbGw9IiNlYjAwMWIiPjwvY2lyY2xlPjxwYXRoIGQ9Ik0yNi42NzEsMTkuOTkzYTguNTg2LDguNTg2LDAsMCwwLDMuMzEzLDYuOCw4LjYsOC42LDAsMCwwLC4wMzMtMTMuNTkxQTguNTc1LDguNTc1LDAsMCwwLDI2LjY3MSwxOS45OTNaIiBmaWxsPSIjZmY1ZjAwIj48L3BhdGg+PC9nPjwvc3ZnPgo="
           alt="Imagem MasterCard">
-        <img class="h-8" src="https://www.gsuplementos.com.br/_nuxt/img/07.8d5f548.svg" alt="Imagem Elo">
-        <img class="h-8"
+        <img class="h-6" src="https://www.gsuplementos.com.br/_nuxt/img/07.8d5f548.svg" alt="Imagem Elo">
+        <img class="h-6"
           src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMi4zMyIgaGVpZ2h0PSIyMC4xMDkiIHZpZXdCb3g9IjAgMCAzMi4zMyAyMC4xMDkiPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMy44MzUgLTkuOTQ1KSI+PHJlY3Qgd2lkdGg9IjEuOTc2IiBoZWlnaHQ9IjIwLjEwOSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTMuODM1IDkuOTQ1KSI+PC9yZWN0PjxyZWN0IHdpZHRoPSIxLjk3NiIgaGVpZ2h0PSIyMC4xMDkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI1Ljk5MSA5Ljk0NSkiPjwvcmVjdD48cmVjdCB3aWR0aD0iMS45NzYiIGhlaWdodD0iMjAuMTA5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzNi4xIDkuOTQ1KSI+PC9yZWN0PjxyZWN0IHdpZHRoPSIxLjk3NiIgaGVpZ2h0PSIyMC4xMDkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQwLjEyMSA5Ljk0NSkiPjwvcmVjdD48cmVjdCB3aWR0aD0iMS45NzYiIGhlaWdodD0iMjAuMTA5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0NC4xODkgOS45NDUpIj48L3JlY3Q+PHJlY3Qgd2lkdGg9IjQuMDE5IiBoZWlnaHQ9IjIwLjEwOSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzAuMDEyIDkuOTQ1KSI+PC9yZWN0PjxyZWN0IHdpZHRoPSI2LjA0MSIgaGVpZ2h0PSIyMC4xMDkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE3Ljg3OSA5Ljk0NSkiPjwvcmVjdD48L2c+PC9zdmc+Cg=="
           alt="Imagem Boleto">
-        <img class="h-8" src="https://www.gsuplementos.com.br/_nuxt/img/10.3fa8833.svg" alt="Imagem Caixa">
-        <img class="h-8" src="https://www.gsuplementos.com.br/_nuxt/img/11.e034f67.svg" alt="Imagem PayPal">
-        <img class="h-8" src="https://www.gsuplementos.com.br/_nuxt/img/12.e906bcc.svg" alt="Imagem Pix">
+        <img class="h-6" src="https://www.gsuplementos.com.br/_nuxt/img/10.3fa8833.svg" alt="Imagem Caixa">
+        <img class="h-6" src="https://www.gsuplementos.com.br/_nuxt/img/11.e034f67.svg" alt="Imagem PayPal">
+        <img class="h-6" src="https://www.gsuplementos.com.br/_nuxt/img/12.e906bcc.svg" alt="Imagem Pix">
       </div>
     </div>
 
@@ -141,39 +186,39 @@
     <div class="flex justify-evenly mt-20 flex-wrap gap-24 items-center">
       <div class="">
         <div class="">
-          <h1 class="text-3xl font-semibold pb-5 ps-10">Central de atendimento</h1>
+          <h1 class="text-2xl font-semibold pb-5 ps-10">Central de atendimento</h1>
         </div>
         <div class="flex items-center">
           <ul class="flex flex-col justify-center ms-px me-px ps-10 isolate">
             <li class="block ">
-              <a class="no-underline hover:underline" href="#">Sobre a Lorem Supplements</a>
+              <a class="no-underline hover:underline text-xs" href="#">Sobre a Lorem Supplements</a>
             </li>
             <li>
-              <a class="no-underline hover:underline" href="#">Team Lorem</a>
+              <a class="no-underline hover:underline text-xs" href="#">Team Lorem</a>
             </li>
             <li>
-              <a class="no-underline hover:underline" href="#">Fale Conosco</a>
+              <a class="no-underline hover:underline text-xs" href="#">Fale Conosco</a>
             </li>
             <li>
-              <a class="no-underline hover:underline" href="#">Blog</a>
+              <a class="no-underline hover:underline text-xs" href="#">Blog</a>
             </li>
             <li>
-              <a class="no-underline hover:underline" href="#">Segurança e Privacidade</a>
+              <a class="no-underline hover:underline text-xs" href="#">Segurança e Privacidade</a>
             </li>
             <li>
-              <a class="no-underline hover:underline" href="#">Formas de Pagamento</a>
+              <a class="no-underline hover:underline text-xs" href="#">Formas de Pagamento</a>
             </li>
             <li>
-              <a class="no-underline hover:underline" href="#">Política de Troca e Devoliução</a>
+              <a class="no-underline hover:underline text-xs" href="#">Política de Troca e Devoliução</a>
             </li>
             <li>
-              <a class="no-underline hover:underline" href="#">Envio da Encomenda</a>
+              <a class="no-underline hover:underline text-xs" href="#">Envio da Encomenda</a>
             </li>
             <li>
-              <a class="no-underline hover:underline" href="#">Política de Entrega</a>
+              <a class="no-underline hover:underline text-xs" href="#">Política de Entrega</a>
             </li>
             <li>
-              <a class="no-underline hover:underline" href="#">Política de Privacidade</a>
+              <a class="no-underline hover:underline text-xs" href="#">Política de Privacidade</a>
             </li>
           </ul>
         </div>
@@ -184,45 +229,45 @@
         <div class="flex items-center flex-col">
           <div class="flex">
             <div class="items-center flex justify-center mr-7 w-14">
-              <i class="fa-solid fa-phone-volume fa-2xl h-auto max-w-full" style="color: #0369a1;"></i>
+              <i class="fa-solid fa-phone-volume fa-xl h-auto max-w-full" style="color: #0369a1;"></i>
             </div>
             <div class="flex text-slate-400  flex-col">
-              <span class="block text-lg font-bold text-sky-700 leading-7">Telefone para contato:</span>
-              <span class="block text-base font-medium leading-7">(00) 0000-0000</span>
-              <span class="text-sky-700 text-base leading-7">Seg a Sex das 8h às 18h</span>
+              <span class="block text-sm font-bold text-sky-700 leading-7">Telefone para contato:</span>
+              <span class="block text-base text-xs leading-7">(00) 0000-0000</span>
+              <span class="text-sky-700 text-sm leading-7">Seg a Sex das 8h às 18h</span>
             </div>
           </div>
           <div class="mt-5 flex text">
             <div class="items-center flex justify-center  mr-7 w-14">
-              <i class="fa-regular fa-envelope fa-2xl h-auto max-w-full" style="color: #0369a1;"></i>
+              <i class="fa-regular fa-envelope fa-xl h-auto max-w-full" style="color: #0369a1;"></i>
             </div>
             <div class="flex text-slate-400 flex-col">
-              <span class="block text-lg font-bold text-sky-700 leading-">E-mail:</span>
-              <span class=" block text-base font-medium leading-7">sac@loremsupplements</span>
+              <span class="block text-sm font-bold text-sky-700 leading-">E-mail:</span>
+              <span class=" block text-base text-xs leading-7">sac@loremsupplements</span>
             </div>
           </div>
         </div>
-        <div class="items-center border-2 rounded flex h-20 justify-center mt-6 p-1 border-sky-700 px-10">
-          <span class="text-black text-base font-bold mr-6">Siga das redes sociais</span>
+        <div class="items-center border-2 rounded flex h-14 justify-center mt-6 p-1 border-sky-700 px-10">
+          <span class="text-black text-sm font-bold mr-6">Siga das redes sociais</span>
           <div class="flex flex-nowrap items-center justify-center">
             <a class="ml-1 mr-1" href="">
-              <img class="transition duration-150 ease-out hover:scale-125 hover:shadow-md hover:shadow-slate-900 rounded-full "
+              <img
+                class="transition duration-150 h-6 ease-out hover:scale-125 hover:shadow-md hover:shadow-slate-900 rounded-full "
                 src="https://www.gsuplementos.com.br/tema/growth/img/rodape/icones/facebook.png" alt="">
               <a class="ml-1 mr-1" href="">
-                <img class="transition duration-150 ease-out hover:scale-125 hover:shadow-md hover:shadow-slate-900 rounded-full"
+                <img
+                  class="transition duration-150 h-6 ease-out hover:scale-125 hover:shadow-md hover:shadow-slate-900 rounded-full"
                   src="https://www.gsuplementos.com.br/tema/growth/img/rodape/icones/instagram.png" alt="">
 
                 <a class="ml-1 mr-1" href="">
-                  <img class="transition duration-150 ease-out hover:scale-125 hover:shadow-md hover:shadow-slate-900 rounded-full"
+                  <img
+                    class="transition duration-150 h-6 ease-out hover:scale-125 hover:shadow-md hover:shadow-slate-900 rounded-full"
                     src="https://www.gsuplementos.com.br/tema/growth/img/rodape/icones/youtube.png" alt="">
                   <a class="ml-1 mr-1" href="">
-                    <img class="transition duration-150 ease-out hover:scale-125 h-10 w-10 hover:shadow-md hover:shadow-slate-900 rounded-full"
-                      src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTY1IiBoZWlnaHQ9Ijk2NSIgdmlld0JveD0iMCAwIDk2NSA5NjUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik00ODIuMjggOTYzLjkzQzc0OC4xMTEgOTYzLjkzIDk2My42MSA3NDguNDMxIDk2My42MSA0ODIuNkM5NjMuNjEgMjE2Ljc2OSA3NDguMTExIDEuMjcwMDIgNDgyLjI4IDEuMjcwMDJDMjE2LjQ0OSAxLjI3MDAyIDAuOTUwMDEyIDIxNi43NjkgMC45NTAwMTIgNDgyLjZDMC45NTAwMTIgNzQ4LjQzMSAyMTYuNDQ5IDk2My45MyA0ODIuMjggOTYzLjkzWiIgZmlsbD0iYmxhY2siIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIvPgo8cGF0aCBkPSJNMTg1Ljc4IDIwMy43MzFMNDE1Ljg1IDUxMS4zNTFMMTg0LjMzIDc2MS40NjFIMjM2LjQ0TDQzOS4xNCA1NDIuNDgxTDYwMi45MSA3NjEuNDYxSDc4MC4yM0w1MzcuMjEgNDM2LjU0MUw3NTIuNzEgMjAzLjczMUg3MDAuNkw1MTMuOTMgNDA1LjQwMUwzNjMuMSAyMDMuNzMxSDE4NS43OFpNMjYyLjQxIDI0Mi4xMTFIMzQzLjg3TDcwMy41OSA3MjMuMDgxSDYyMi4xM0wyNjIuNDEgMjQyLjExMVoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo="
-                      alt="">
-                    <a class="ml-1 mr-1" href="">
-                      <img class="transition duration-150 ease-out hover:scale-125 hover:shadow-md hover:shadow-slate-900 rounded-full"
-                        src="https://www.gsuplementos.com.br/tema/growth/img/rodape/icones/tiktok.png" alt="">
-                    </a>
+                    <img
+                      class="transition duration-150 h-6 ease-out hover:scale-125 hover:shadow-md hover:shadow-slate-900 rounded-full"
+                      src="https://www.gsuplementos.com.br/tema/growth/img/rodape/icones/tiktok.png" alt="">
+                  </a>
           </div>
         </div>
       </div>
@@ -230,7 +275,7 @@
 
     <!-- Aba do CopyRight -->
     <div class="bg-gradient-to-r from-sky-700 to-sky-400 mt-10">
-      <div class="flex justify-around py-6 text-lg font-medium">
+      <div class="flex justify-around py-4 text-lg text-sm">
         <p>Lorem Supplements Produtos Alimentícios e Acessórios - Todos os direitos reservados &copy;Lorem Supplements
         </p>
       </div>

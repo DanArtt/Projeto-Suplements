@@ -7,12 +7,12 @@ const idsProdutoCarrinhoQuantidade = {
 //Função para abrir o carrinho
 function abrirCarrinho() {
     document.getElementById("carrinho").classList.add('right-[0px]');
-    document.getElementById("carrinho").classList.remove('right-[-500px]');
+    document.getElementById("carrinho").classList.remove('right-[-350px]');
 }
 //Função para fehcar o carrinho
 function fecharCarrinho() {
     document.getElementById("carrinho").classList.remove('right-[0px]');
-    document.getElementById("carrinho").classList.add('right-[-500px]');
+    document.getElementById("carrinho").classList.add('right-[-350px]');
 }
 //Função para visualizar o carrinho ao clicar no botao
 export function inicializarCarrinho() {
@@ -74,22 +74,22 @@ function desenharProdutoNoCarrinho(idProduto) {
     const cartaoProdutoCarrinho =
     `
     <button id="remover-item-${produto.id}" class="absolute top-2 right-2">
-    <i class="fa-solid fa-circle-xmark fa-xl text-slate-600 hover:text-slate-900"></i>
+    <i class="fa-solid fa-circle-xmark fa-md text-slate-600 hover:text-slate-900"></i>
         </button>
         <img 
-            class="h-32 w-28 rounded-l-lg p-2" 
+            class="h-26 w-24 rounded-l-lg" 
             src="./img/${produto.nomeArquivoImagem1}"
             alt="Carrinho: ${produto.nomeProduto}"
         >
         <div class="p-2 flex flex-col justify-between">
-            <p class="text-slate-900 text-xl font-medium">${produto.nomeProduto}</p>
-            <p class="text-slate-900 text-lg">${produto.especificacao}</p>
-            <p class="text-green-500 text-xl">R$: ${produto.precoPromocao}</p>
+            <p class="text-slate-900 text-[11px] font-bold">${produto.nomeProduto}</p>
+            <p class="text-slate-900 text-[9px]">${produto.especificacao}</p>
+            <p class="text-green-500 text-[13px]">R$: ${produto.precoPromocao}</p>
         </div>
-        <div class="flex text-slate-900 items-end items-center absolute bottom-2 right-2 text-xl">
-            <button id="decrementar-produto-${produto.id}" class="hover:bg-slate-500 hover:text-slate-100 duration-200 px-2.5 rounded-full">-</button>
+        <div class="flex text-slate-900 items-end items-center absolute bottom-2 right-2 text-sm">
+            <button id="decrementar-produto-${produto.id}" class="px-2 duration-150 hover:scale-125">-</button>
             <p id="quantidade-${produto.id}" class="ml-2">${idsProdutoCarrinhoQuantidade[produto.id]}</p>
-            <button id="incrementar-produto-${produto.id}" class="hover:bg-slate-500 hover:text-slate-100 duration-200 px-2 rounded-full ml-2">+</button>
+            <button id="incrementar-produto-${produto.id}" class="px-1.5 duration-150 hover:scale-125 ml-2">+</button>
         </div>
     `
     elementoArticle.innerHTML = cartaoProdutoCarrinho;
