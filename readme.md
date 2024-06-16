@@ -3,7 +3,9 @@
 </h4>
 <h2>Caso você tenha baixado o projeto na sua maquina, terá que iniciar ele da seguinte forma.</h2>
 
-<p>Primeiro você deve instalar as dependencias do projeto.</p>
+<p>Baixe o node.js na sua maquina para conseguir iniciar o npm.</p>
+
+<p>Depois você irá abrir o projeto e instalar as dependencias.</p>
 
 ## abra o terminal do VS Code.
 $ npm install
