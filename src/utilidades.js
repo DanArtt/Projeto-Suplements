@@ -25,7 +25,7 @@ export const catalogo = [
     },
     {
         id: "3",
-        nomeProduto: "Cinturão para Agachamento",
+        nomeProduto: "Cinturão para Agachamento Estofado",
         especificacao: "100% couro",
         precoPromocao: 119.99,
         precoReal: 149.99,
@@ -36,7 +36,7 @@ export const catalogo = [
     },
     {
         id: "4",
-        nomeProduto: "Coqueteleira Preta Dark Lab",
+        nomeProduto: "Coqueteleira Preta Dark Lab + Peneira",
         especificacao: "Tampa e Peneira",
         precoPromocao: 49.99,
         precoReal: 79.99,
@@ -47,7 +47,7 @@ export const catalogo = [
     },
     {
         id: "5",
-        nomeProduto: "Coqueteleira Preta Growth",
+        nomeProduto: "Coqueteleira Preta Growth + Peneira",
         especificacao: "Tampa e Peneira",
         precoPromocao: 19.99,
         precoReal: 49.99,
@@ -58,7 +58,7 @@ export const catalogo = [
     },
     {
         id: "6",
-        nomeProduto: "Creatina Probiotica 300g",
+        nomeProduto: "Creatina Probiotica Monohidratada 300g",
         especificacao: "Monohidratada",
         precoPromocao: 49.99,
         precoReal: 79.99,
@@ -80,7 +80,7 @@ export const catalogo = [
     },
     {
         id: "8",
-        nomeProduto: "Faixa de Joelho",
+        nomeProduto: "Faixa Elástica de Joelho com 2 Metros",
         especificacao: "Faixa Elástica com 2 Metros",
         precoPromocao: 99.99,
         precoReal: 119.99,
@@ -91,7 +91,7 @@ export const catalogo = [
     },
     {
         id: "9",
-        nomeProduto: "Hipercalórico Growth 3kg",
+        nomeProduto: "Hipercalórico Growth Premium Blend 3kg",
         especificacao: "Big Mass Ultra Premium Blend",
         precoPromocao: 119.99,
         precoReal: 149.99,
@@ -124,7 +124,7 @@ export const catalogo = [
     },
     {
         id: "12",
-        nomeProduto: "Short Preto Growth Feminino",
+        nomeProduto: "Short Preto Growth Feminino Algodão",
         especificacao: "100% Algodão",
         precoPromocao: 99.99,
         precoReal: 129.99,
@@ -157,7 +157,7 @@ export const catalogo = [
     },
     {
         id: "15",
-        nomeProduto: "Par Strap",
+        nomeProduto: "Conjunto Par Strap Tecido Resistente",
         especificacao: "100% Algodão",
         precoPromocao: 39.99,
         precoReal: 59.99,
@@ -190,7 +190,7 @@ export const catalogo = [
     },
     {
         id: "18",
-        nomeProduto: "Creatina Growth 250g",
+        nomeProduto: "Creatina Growth Monohidratada 250g",
         especificacao: "Monohidratada",
         precoPromocao: 89.99,
         precoReal: 109.99,
@@ -201,7 +201,7 @@ export const catalogo = [
     },
     {
         id: "19",
-        nomeProduto: "Pré Treino Raze 300g",
+        nomeProduto: "Pré Treino Raze Sabor Laranja 300g",
         especificacao: "Sabor Laranja",
         precoPromocao: 89.99,
         precoReal: 189.99,
@@ -213,7 +213,7 @@ export const catalogo = [
 
     {
         id: "20",
-        nomeProduto: "Short Feminino Growth Azul",
+        nomeProduto: "Short Feminino Growth Azul Algodão",
         especificacao: "100% Algodão",
         precoPromocao: 99.99,
         precoReal: 119.99,
@@ -224,7 +224,7 @@ export const catalogo = [
     },
     {
         id: "21",
-        nomeProduto: "Top Feminino Growth",
+        nomeProduto: "Top Feminino Growth Poliéster",
         especificacao: "100% Poliéster",
         precoPromocao: 89.99,
         precoReal: 109.99,
@@ -235,7 +235,7 @@ export const catalogo = [
     },
     {
         id: "22",
-        nomeProduto: "Whey Protein Growth 1kg",
+        nomeProduto: "Whey Protein Growth Sabor Natural 1kg",
         especificacao: "Sabor Natural",
         precoPromocao: 99.99,
         precoReal: 109.99,

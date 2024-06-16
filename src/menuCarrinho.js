@@ -64,6 +64,8 @@ function desenharProdutoNoCarrinho(idProduto) {
         "bg-slate-300", 
         "rounded-lg", 
         "relative",
+        "border-red-600",
+        "border-2",
         
     ];
 
@@ -73,17 +75,16 @@ function desenharProdutoNoCarrinho(idProduto) {
     
     const cartaoProdutoCarrinho =
     `
-    <button id="remover-item-${produto.id}" class="absolute top-2 right-2">
-    <i class="fa-solid fa-circle-xmark fa-md text-slate-600 hover:text-slate-900"></i>
+    <button id="remover-item-${produto.id}" class="absolute top-8 right-2">
+    <i class="fa-solid fa-circle-xmark fa-md text-red-600 hover:text-red-900"></i>
         </button>
         <img 
             class="h-26 w-24 rounded-l-lg" 
             src="./img/${produto.nomeArquivoImagem1}"
             alt="Carrinho: ${produto.nomeProduto}"
         >
-        <div class="p-2 flex flex-col justify-between">
+        <div class="p-2 flex flex-col justify-around">
             <p class="text-slate-900 text-[11px] font-bold">${produto.nomeProduto}</p>
-            <p class="text-slate-900 text-[9px]">${produto.especificacao}</p>
             <p class="text-green-500 text-[13px]">R$: ${produto.precoPromocao}</p>
         </div>
         <div class="flex text-slate-900 items-end items-center absolute bottom-2 right-2 text-sm">

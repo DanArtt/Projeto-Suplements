@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
   <meta charset="UTF-8">
@@ -9,23 +9,26 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="module" src="main.js"></script>
+    <script src="./src/darkMode.js"></script>
   <link rel="shortcut icon" type="imagex/png" href="./img/logoBranca.png">
+  
 </head>
 
-<body class="font-sans bg-stone-100 flex flex-col">
+<body class="font-sans bg-stone-100 dark:bg-zinc-700 flex flex-col">
   <!------------------- Carrinho de Compras ------------------>
   <section id="carrinho"
-    class="fixed top-0 right-[-350px] bg-sky-700  h-screen w-[350px] border-solid border-l-2 border-black z-20 duration-200 p-5 flex flex-col justify-between">
-    <div id="cabecalho-carrinho" class="flex justify-between m-4">
-      <p>Meu carrinho</p>
-      <button id="fechar-carrinho" class="h-3/5">
-        <i class="fa-solid fa-circle-xmark fa-md text-slate-800 hover:text-slate-900"></i>
+    class="fixed top-0 right-[-350px] bg-slate-100 dark:bg-zinc-700  h-screen w-[350px] border-solid border-l-2 border-black z-20 duration-200 p-5 flex flex-col justify-between">
+    <div id="cabecalho-carrinho" class="flex justify-between">
+      <p class="text-slate-900 uppercase dark:text-zinc-100">Meu carrinho</p>
+      <button class="" id="fechar-carrinho" class="h-3/5">
+        <i class="fa-solid fa-circle-xmark fa-md text-slate-900 hover:text-slate-600 dark:text-zinc-100 dark:hover:text-zinc-500"></i>
       </button>
     </div>
     <section id="produtos-carrinho" class="h-3/5 overflow-y-auto flex flex-col gap-2">
     </section>
-    <p id="preco-total">R$ 499.99</p>
-    <button class="bg-slate-200 p-1">Finalizar Compra</button>
+    <p class="dark:text-zinc-100" id="preco-total">R$ 499.99</p>
+    <button class="mt-2 py-6 border-solid border-slate-700 dark:border-zinc-100 border-2 rounded-md h-6 text-slate-100 flex justify-center items-center px-2 hover:bg-red-600 duration-150"><p class="text-black text-center justify-center uppercase dark:text-zinc-100">Finalizar Compra</button>
   </section>
 
 
@@ -62,22 +65,27 @@
       </ul>
     </div>
     <!-- NavBar Principal -->
-    <div class="flex bg-gradient-to-r from-sky-700 to-sky-400 px-8 py-2 justify-between">
+    <div class="flex px-8 py-2 gap-3 bg-slate-100 dark:bg-zinc-800 justify-between transition-colors duration-300">
       <img class="h-12" src="img/logoPreta.png" alt="Logo Loja" />
-      <div class="flex gap-3 items-center mx-6">
-        <div class="flex pr-6 gap-1.5 items-center">
-          <a class=" text-xs no-underline hover:underline decoration-solid " href="/login.html">Entrar</a>
-          <p class="text-xs">|</p>
-          <a class="text-xs no-underline hover:underline decoration-solid" href="cadastro.html">Cadastrar-se</a>
+      <div class="flex gap-2 items-center ">
+        <div class="flex pr-4 gap-1.5 items-center">
+          <a class=" text-xs no-underline hover:underline decoration-solid dark:text-zinc-100" href="/login.html">Entrar</a>
+          <p class="text-xs dark:text-zinc-100">|</p>
+          <a class="text-xs no-underline hover:underline decoration-solid dark:text-zinc-100" href="cadastro.html">Cadastrar-se</a>
 
         </div>
-        <button><i class="fa-solid fa-heart fa-xs duration-150 hover:scale-125" style="color: #000000;"></i></button>
-        <button><i class="fa-solid fa-user fa-xs duration-150 hover:scale-125" style="color: #000000;"></i></button>
-        <button id="abrir-carrinho"><i class="fa-solid fa-cart-shopping fa-xs duration-150 hover:scale-125"
-            style="color: #000000;"></i></button>
+        <button><i class="fa-solid fa-heart fa-xs duration-150 hover:scale-125 dark:text-zinc-100"></i></button>
+        <button><i class="fa-solid fa-user fa-xs duration-150 hover:scale-125 dark:text-zinc-100"></i></button>
+        <button id="abrir-carrinho"><i class="fa-solid fa-cart-shopping fa-xs duration-150 hover:scale-125 dark:text-zinc-100"></i>
+        </button>
+        <label class="flex cursor-pointer relative">
+          <input type="checkbox" id='darkMode' class="sr-only peer">
+          <div class="peer after:bg-[length:13px_13px] after:bg-center after:bg-no-repeat peer-checked:after:bg-[url('img/light.svg')] after:bg-[url('img/dark.svg')] after:transition-all after:duration-300 after:left-0 peer-checked:after:left-[32px] w-14 h-6 bg-zinc-300 dark:bg-zinc-700 rounded-full after:content-[''] flex items-center px-0.5 after:rounded-full after:relative after:flex after:w-5 after:h-5 after:bg-zinc-100 dark:after:bg-zinc-800 after:rotate-0 peer-checked:after:rotate-180 shadow-inner shadow-slate-500 dark:shadow-slate-900 peer-checked:after:animate-sun after:animate-moon ">
+          </div>
+        </label>
       </div>
     </div>
-    <nav class="navPrincipal shadow-slate-900 shadow-lg">
+    <nav class="navPrincipal bg-gradient-to-r from-red-900 to-red-600 shadow-slate-900 dark:shadow-zinc-600 shadow-lg">
       <ul class="navbar">
         <li class="dropdown li">
           <a class="produtosA" href="#">Todas as Categorias</a>
@@ -124,17 +132,17 @@
 
 
   <!------------------ Carrossel do Site ------------------->
-  <div class="relative overflow-hidden bg-gray-200 shadow-md shadow-slate-900 mb-20">
+  <div class="relative overflow-hidden bg-gray-200 shadow-md shadow-slate-900 dark:shadow-zinc-600 mb-20">
     <div class="carrossel-slide">
-      <img src="https://www.gsuplementos.com.br/upload/banner/1114e27e8c8de9b4722effa7a9aa7095.webp" alt="Imagem 1"
+      <img src="./img/banner-1.png" alt="Imagem 1"
         class="w-full h-auto">
     </div>
     <div class="carrossel-slide">
-      <img src="https://www.gsuplementos.com.br/upload/banner/8fe5cf1ac4aaace7995d8b9126814cad.webp" alt="Imagem 2"
+      <img src="./img/banner-2.png" alt="Imagem 2"
         class="w-full h-auto">
     </div>
     <div class="carrossel-slide">
-      <img src="https://www.gsuplementos.com.br/upload/banner/f9d3ecd404339766911a2881845f7a58.webp" alt="Imagem 3"
+      <img src="./img/banner-3.png" alt="Imagem 3"
         class="w-full h-auto">
     </div>
   </div>
@@ -153,15 +161,15 @@
         <input type="email" id="email" name="email" class="h-8 pl-4 pr-24 m-2 rounded-lg"
           placeholder="Digite seu E-email">
         <button type="submit "
-          class="h-8 px-6 m-2 text-indigo-100 transition-colors duration-150 bg-sky-700 rounded-lg focus:shadow-outline hover:bg-sky-400">Enviar</button>
+          class=" flex items-center h-8 px-6 m-2 text-indigo-100 transition-colors duration-150 bg-red-700 rounded-lg focus:shadow-outline hover:bg-red-900">Enviar</button>
       </div>
     </div>
   </div>
 
   <!--------------------- Footer do Site --------------------->
   <footer>
-    <div>
-      <h1 class="flex justify-center pb-10 text-2xl mb-20">
+    <div class="flex justify-center items-center flex-col">
+      <h1 class="flex justify-center items-center text-2xl dark:text-zinc-100 mb-20">
         Formas de Pagamento
       </h1>
       <div class="flex flex-wrap justify-center gap-24">
@@ -180,13 +188,13 @@
     </div>
 
     <!-- Aba de Central de Atendimento -->
-    <div class="border-b-2 border-black mx-24 mt-20">
+    <div class="border-b-2 border-black dark:border-zinc-100 mx-24 mt-20">
 
     </div>
-    <div class="flex justify-evenly mt-20 flex-wrap gap-24 items-center">
+    <div class="flex justify-evenly mt-20 flex-wrap gap-24 items-center dark:text-zinc-100">
       <div class="">
         <div class="">
-          <h1 class="text-2xl font-semibold pb-5 ps-10">Central de atendimento</h1>
+          <h1 class="text-2xl font-semibold pb-5 ps-10 ">Central de atendimento</h1>
         </div>
         <div class="flex items-center">
           <ul class="flex flex-col justify-center ms-px me-px ps-10 isolate">
@@ -225,30 +233,30 @@
       </div>
 
       <!-- Aba de Contato + Redes Sociais -->
-      <div class="flex flex-col pr-16 col-start-6 col-end-13">
-        <div class="flex items-center flex-col">
-          <div class="flex">
+      <div class="flex flex-col justify-center items-center">
+        <div class="flex flex-col">
+          <div class="flex justify-center items-center">
             <div class="items-center flex justify-center mr-7 w-14">
-              <i class="fa-solid fa-phone-volume fa-xl h-auto max-w-full" style="color: #0369a1;"></i>
+              <i class="flex justify-center items-center fa-solid fa-phone-volume fa-2xl h-auto max-w-full text-red-900 dark:text-zinc-100"></i>
             </div>
-            <div class="flex text-slate-400  flex-col">
-              <span class="block text-sm font-bold text-sky-700 leading-7">Telefone para contato:</span>
-              <span class="block text-base text-xs leading-7">(00) 0000-0000</span>
-              <span class="text-sky-700 text-sm leading-7">Seg a Sex das 8h às 18h</span>
+            <div class="flex dark:text-slate-300 text-slate-950  flex-col">
+              <span class="block text-sm font-bold text-red-900 dark:text-zinc-200 leading-7">Telefone para contato:</span>
+              <span class="block  text-xs leading-7">(00) 0000-0000</span>
+              <span class="text-red-900 dark:text-zinc-100 text-sm leading-7">Seg a Sex das 8h às 18h</span>
             </div>
           </div>
           <div class="mt-5 flex text">
             <div class="items-center flex justify-center  mr-7 w-14">
-              <i class="fa-regular fa-envelope fa-xl h-auto max-w-full" style="color: #0369a1;"></i>
+              <i class="fa-regular fa-envelope fa-2xl h-auto max-w-full text-red-900 dark:text-zinc-100"></i>
             </div>
-            <div class="flex text-slate-400 flex-col">
-              <span class="block text-sm font-bold text-sky-700 leading-">E-mail:</span>
-              <span class=" block text-base text-xs leading-7">sac@loremsupplements</span>
+            <div class="flex dark:text-slate-300 text-slate-950 flex-col">
+              <span class="block text-sm font-bold text-red-900 dark:text-zinc-100 leading-">E-mail:</span>
+              <span class=" block text-xs leading-7">sac@loremsupplements</span>
             </div>
           </div>
         </div>
-        <div class="items-center border-2 rounded flex h-14 justify-center mt-6 p-1 border-sky-700 px-10">
-          <span class="text-black text-sm font-bold mr-6">Siga das redes sociais</span>
+        <div class="items-center border-2 rounded flex h-14 justify-center mt-6 p-1 border-red-700 px-10">
+          <span class="text-black dark:text-zinc-100 text-sm font-bold mr-6">Siga das redes sociais</span>
           <div class="flex flex-nowrap items-center justify-center">
             <a class="ml-1 mr-1" href="">
               <img
@@ -274,15 +282,14 @@
     </div>
 
     <!-- Aba do CopyRight -->
-    <div class="bg-gradient-to-r from-sky-700 to-sky-400 mt-10">
-      <div class="flex justify-around py-4 text-lg text-sm">
+    <div class="bg-gradient-to-r from-red-900 to-red-600 mt-10">
+      <div class="flex justify-center text-center py-4 text-lg text-sm text-white uppercase font-bold text-xs">
         <p>Lorem Supplements Produtos Alimentícios e Acessórios - Todos os direitos reservados &copy;Lorem Supplements
         </p>
       </div>
     </div>
   </footer>
 
-  <script type="module" src="main.js"></script>
 </body>
 
 </html>

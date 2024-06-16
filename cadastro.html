@@ -10,104 +10,121 @@
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" type="imagex/png" href="./img/logoBranca.png">
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
-<body class="">
-    <div class="flex justify-center items-center h-screen p-10 py-24">
-        <div class="grid md:grid-cols-2 grid-cols-1  border rounded-3xl">
-            <div class="bg-gradient-to-r from-sky-700 to-sky-400 flex justify-center rounded-l-3xl items-center">
+<body class="my-2 dark:bg-zinc-800">
+    <div class="flex justify-center items-center h-screen p-36">
+        <div class="grid md:grid-cols-2 grid-cols-1  border rounded-xl">
+            <div class="bg-gradient-to-r from-red-900 to-red-600 flex justify-center rounded-l-xl items-center">
                 <img src="./img/logoBranca.png" class="h-32 flex justify-center" alt="">
             </div>
-            <div class="flex justify-center items-center p-5 overflow-y-auto">
-                <form action="" class=" ">
-                    <h1 class="text-center mb-4 font-bold text-md">Cadastrar</h1>
+            <div class="flex justify-center items-center p-2">
+                <form id="form" onsubmit="cadastrarUsuario(event)">
+                    <h1 class="text-center mb-2 font-bold text-md dark:text-zinc-100">Cadastrar</h1>
                     <div class="flex justify-center items-center flex-col">
-                        <div>
-                            <div class="flex gap-2">
-                                <input type="text" id="nomeCompleto"
-                                    class=" bg-gray-100 border outline-none rounded-md py-3 w-full px-4 h-[40px] mb-3"
-                                    placeholder="Nome Completo" required>
-                                <input type="email" id="email"
-                                    class=" bg-gray-100 border outline-none rounded-md py-3 w-full px-4 h-[40px] mb-3"
-                                    placeholder="E-mail" required>
-                                <input type="date" id="data"
-                                    class=" bg-gray-100 border outline-none rounded-md py-3 w-full px-4 h-[40px] mb-3"
-                                    placeholder="" required>
+                        <div class="flex flex-col gap-2">
+                            <input type="text" id="nomeCompleto"
+                                class="text-sm bg-gray-100 border-slate-100 outline-none rounded-md py-3 w-full px-4 h-[25px] required"
+                                oninput="nameValidate()" placeholder="Nome Completo">
+                            <input type="email" id="email"
+                                class="text-sm bg-gray-100 border-slate-100 outline-none rounded-md py-3 w-full px-4 h-[25px] required"
+                                oninput="emailValidate()" placeholder="E-mail">
+                            <div class="flex justify-around">
+                                <div class="flex items-center justify-center gap-1">
+                                    <input type="checkbox" id="sexo"
+                                    class="text-sm bg-gray-100 border outline-none required dark:text-zinc-100"
+                                    oninput="sexoValidate()">Feminino
+                                </div>
+                                <div class="flex items-center justify-center gap-1">
+                                    <input type="checkbox" id="Sexo"
+                                    class="text-sm bg-gray-100 border outline-none required dark:text-zinc-100"
+                                    oninput="sexoValidate()">Masculino
+                                </div>
                             </div>
-                            <div class="flex gap-2">
-                                <input type="text" id="nomeMaterno"
-                                    class=" bg-gray-100 border outline-none rounded-md py-3 w-full px-4 h-[40px] mb-3"
-                                    placeholder="Nome Materno" required>
-                                <input type="text" id="cpf"
-                                    class=" bg-gray-100 border outline-none rounded-md py-3 w-full px-4 h-[40px] mb-3"
-                                    placeholder="CPF" required>
-
-                            </div>
-
-                            <div class="flex gap-2">
+                            <input type="date" id="data"
+                                class="text-sm bg-gray-100 border outline-none rounded-md py-3 w-full px-4 h-[25px] required"
+                                oninput="dataValidate()">
+                            <input type="text" id="nomeMaterno"
+                                class="text-sm bg-gray-100 border outline-none rounded-md py-3 w-full px-4 h-[25px] required"
+                               oninput="nomeMaternoValidate()" placeholder="Nome Materno">
+                            <input type="text" id="cpf"
+                                class="text-sm bg-gray-100 border outline-none rounded-md py-3 w-full px-4 h-[25px] required"
+                                placeholder="CPF" maxlength="14" oninput="cpfValidate()">
+                            <div class="flex gap-1">
                                 <input type="tel" id="telefoneCelular"
-                                    class=" bg-gray-100 border outline-none rounded-md py-3 w-full px-4 h-[40px] mb-3"
-                                    placeholder="Telefone Celular" required>
+                                    class="text-sm bg-gray-100 border outline-none rounded-md py-3 w-full px-4 h-[25px] required"
+                                    placeholder="Telefone Celular" maxlength="17" oninput="telefoneCelularValidate()">
                                 <input type="tel" id="telefoneFixo"
-                                    class=" bg-gray-100 border outline-none rounded-md py-3 w-full px-4 h-[40px] mb-3"
-                                    placeholder="Telefone Fixo" required>
+                                    class="text-sm bg-gray-100 border outline-none rounded-md py-3 w-full px-4 h-[25px] required"
+                                    placeholder="Telefone Fixo" maxlength="15" oninput="telefoneFixoValidate()">
                             </div>
-                            <div class="flex gap-2">
+                            <div class="flex gap-1">
                                 <input type="text" id="login"
-                                    class=" bg-gray-100 border outline-none rounded-md py-3 w-full px-4 h-[40px] mb-3"
-                                    placeholder="Login" required>
+                                    class="text-sm bg-gray-100 border outline-none rounded-md py-3 w-full px-4 h-[25px] required"
+                                    placeholder="Login" maxlength="6" oninput="loginValidate()">
                                 <input type="password" id="senha"
-                                    class=" bg-gray-100 border outline-none rounded-md py-3 w-full px-4 h-[40px] mb-3"
-                                    placeholder="Senha" required>
+                                    class="text-sm bg-gray-100 border outline-none rounded-md py-3 w-full px-4 h-[25px] required"
+                                    oninput="senhaValidate()" placeholder="Senha">
                                 <input type="password" id="senhaConfirmar"
-                                    class=" bg-gray-100 border outline-none rounded-md py-3 w-full px-4 h-[40px] mb-3"
-                                    placeholder="SenhaConfirmar" required>
+                                    class="text-sm bg-gray-100 border outline-none rounded-md py-3 w-full px-4 h-[25px] required"
+                                    oninput="compareSenha()" placeholder="Confirmar Senha">
+
                             </div>
-                            <h1 class="text-center mb-4 font-bold text-md mt-4">Endereço</h1>
-                            <div class="flex gap-2">
+                            <h1 class="text-center mb-4 font-bold text-md mt-2 dark:text-zinc-100">Endereço</h1>
+                            <div class="flex gap-1">
                                 <input type="text" id="cep"
-                                    class=" bg-gray-100 border outline-none rounded-md py-3 w-full px-4 h-[40px] mb-3"
-                                    placeholder="CEP" required>
+                                    class="text-sm bg-gray-100 border outline-none rounded-md py-3 w-full px-4 h-[25px] required"
+                                    placeholder="CEP" maxlength="8" oninput="cepValidate()">
                                 <input type="text" id="logradouro"
-                                    class=" bg-gray-100 border outline-none rounded-md py-3 w-full px-4 h-[40px] mb-3"
-                                    placeholder="Logradouro" required>
+                                    class="text-sm bg-gray-100 border outline-none rounded-md py-3 w-full px-4 h-[25px] required"
+                                    placeholder="Logradouro">
                                 <input type="text" id="numero"
-                                    class=" bg-gray-100 border outline-none rounded-md py-3 w-full px-4 h-[40px] mb-3"
-                                    placeholder="Número" required>
+                                    class="text-sm bg-gray-100 border outline-none rounded-md py-3 w-full px-4 h-[25px] required"
+                                    placeholder="Número" oninput="numeroValidate()">
                             </div>
-                            <div class="flex gap-2">
+                            <div class="flex gap-1">
                                 <input type="text" id="bairro"
-                                    class=" bg-gray-100 border outline-none rounded-md py-3 w-full px-4 h-[40px] mb-3"
-                                    placeholder="Bairro" required>
+                                    class="text-sm bg-gray-100 border outline-none rounded-md py-3 w-full px-4 h-[25px] required"
+                                    placeholder="Bairro">
                                 <input type="text" id="cidade"
-                                    class=" bg-gray-100 border outline-none rounded-md py-3 w-full px-4 h-[40px] mb-3"
-                                    placeholder="Cidade" required>
+                                    class="text-sm bg-gray-100 border outline-none rounded-md py-3 w-full px-4 h-[25px] required"
+                                    placeholder="Cidade">
                                 <input type="text" id="estado"
-                                    class=" bg-gray-100 border outline-none rounded-md py-3 w-full px-4 h-[40px] mb-3"
-                                    placeholder="Estado" required>
+                                    class="text-sm bg-gray-100 border outline-none rounded-md py-3 w-full px-4 h-[25px] required"
+                                    placeholder="Estado">
                             </div>
                         </div>
                     </div>
 
-                    <div class="flex">
+                    <div class="flex mt-2">
                         <button type="reset"
-                            class=" bg-sky-700 hover:bg-sky-400 border outline-none rounded-md w-full h-[40px] font-semibold text-white">Limpar</button>
+                            class="text-sm bg-red-600 hover:bg-red-900 border outline-none rounded-md w-full h-[25px] font-semibold text-white">Limpar</button>
                         <button type="submit"
-                            class=" bg-sky-700 hover:bg-sky-400 border outline-none rounded-md w-full h-[40px] font-semibold text-white">Entrar</button>
+                            class="text-sm bg-red-600 hover:bg-red-900 border outline-none rounded-md w-full h-[25px] font-semibold text-white">Entrar</button>
                     </div>
-                    <div class="flex justify-center items-center pt-8 gap-4">
-                        <p class="text-xs">Já tem cadastro? <a href="login.html"
-                                class="text-sky-700 font-bold hover:underline text-xs">Entrar</a></p>
-                        <a href="" class="hover:underline text-xs">Esqueceu sua Senha ?</a>
+                    <div class="flex justify-center items-center pt-4 gap-2">
+                        <p class="text-xs dark:text-zinc-100">Já tem cadastro? <a href="login.html"
+                                class="text-red-600 font-bold hover:underline hover:text-red-900 text-xs">Entrar</a></p>
+                        <a href="" class="hover:underline text-xs dark:text-zinc-100">Esqueceu sua Senha ?</a>
                     </div>
-                    <div class="flex justify-center items-center pt-8 flex-col">
-                        <a href="index.html" class="hover:underline text-xs">Voltar</a>
+                    <div class="flex justify-center items-center pt-4 flex-col">
+                        <a href="index.html" class="hover:underline text-xs dark:text-zinc-100">Voltar</a>
                     </div>
+                    <label class="flex cursor-pointer relative justify-center">
+                        <input type="checkbox" id='darkMode' class="sr-only peer">
+                        <div class="peer after:bg-[length:13px_13px] after:bg-center after:bg-no-repeat peer-checked:after:bg-[url('img/light.svg')] after:bg-[url('img/dark.svg')] after:transition-all after:duration-300 after:left-0 peer-checked:after:left-[32px] w-14 h-6 bg-zinc-300 dark:bg-zinc-700 rounded-full after:content-[''] flex items-center px-0.5 after:rounded-full after:relative after:flex after:w-5 after:h-5 after:bg-zinc-100 dark:after:bg-zinc-800 after:rotate-0 peer-checked:after:rotate-180 shadow-inner shadow-slate-500 dark:shadow-slate-900 peer-checked:after:animate-sun after:animate-moon ">
+                        </div>
+                      </label>
                 </form>
             </div>
         </div>
     </div>
-    <script src="./src/apiCep.js"></script>
 </body>
+<script src="./src/apiCep.js"></script>
+<script src="./src/cadastro.js"></script>
+<script src="./src/validacaoForm.js"></script>
+<script src="./src/darkMode.js"></script>
 
 </html>
